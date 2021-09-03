@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="dot dot1">
+      <img src="./img/dot.png" alt="" class="img-1">
+      <img src="./img/earth (1).png" alt="" class="img-2">
+    </div>
+    <div class="dot dot2">
+      <img src="./img/custom.png" alt="" class="img-1">
+      <img src="./img/snail.png" alt="" class="img-2">
+    </div>
+    <div class="dot dot3">
+      <img src="./img/bleach.png" alt="" class="img-1">
+      <img src="./img/paw.png" alt="" class="img-2">
+    </div>
+    <div class="dot dot4">
+      <img src="./img/dot.png" alt="" class="img-1">
+      <img src="./img/farmer.png" alt="" class="img-2">
+    </div>
+    <div class="dot dot5">
+      <img src="./img/hexagon.png" alt="" class="img-1">
+      <img src="./img/potato.png" alt="" class="img-2">
+    </div>
+  </div>
+  <script>
+    function reset_animation() {
+      var list = document.querySelectorAll('img');
+      list.forEach(el=>{
+        el.style.animation = 'none';
+        el.offsetHeight; /* trigger reflow */
+        el.style.animation = null; 
+      })
+    };
+    setInterval(reset_animation,3000);
+  </script>
+</body>
+</html>
